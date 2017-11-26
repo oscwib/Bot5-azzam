@@ -1,9 +1,9 @@
-[New] Bot Saling Backup Dan Admin Di Undang Jika Ke Kick
+Bot Saling Backup Dan Admin Di Undang Jika Ke Kick
 
 
 #Bot Protect Versi  1 admin dan 5  Bot
-# Koplaxs 5 Bot
-Koplaxs BOT Protect
+# Azzam 5 Bot
+BOT Protect
 Versi TCR
 =======================================
 Bot Protect TCR Versi 1 admin dan 5 Bot
@@ -27,28 +27,20 @@ Cara Instal :
 - pkg install python -y
 - pkg install python2 -y
 - pkg install git -y
-- git clone https://github.com/koplaxs/Koplaxs5Bot
+- git clone https://github.com/azzamaks/Bot5-azzam
 - pip2 install rsa
 - pip2 install thrift==0.9.3
 - pip2 install requests
 
 Cara Menjalankan Botnya :
-- cd Koplaxs5Bot
-- python2 Koplaxs5Bot.py
-
-Video Tutor :(HP Root)
-https://youtu.be/yYu6ZmiM_YI
-
-Video Tutor :(No Root)
-https://youtu.be/Iim_uFMrpCU
+- cd Bot5-azzam
+- python2 
 
 Ada Pertanyaan?
-Add My Line => @hanavy1992
+Add My Line => @anagda
 
 Thanks For :
 - Alfathdirk
-- Farzain
-- Dan Kawan²
 ================================
-Koplaxs & One Piece Team Protect
+~~Azzam-
 ================================
