@@ -34,7 +34,8 @@ Cara Instal :
 
 Cara Menjalankan Botnya :
 - cd Bot5-azzam
-- python2 
+- python2 Akatsuki.py
+- selesai
 
 Ada Pertanyaan?
 Add My Line => @anagda
