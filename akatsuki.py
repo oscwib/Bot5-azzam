@@ -69,11 +69,11 @@ KAC=[cl,ki,kk,kc,ks]
 #DEF8=[cl,ki,kk,kc,ks,ka,kb,ke,ku] Udah Ga Kepake(Boleh di apus)
 #DEF9=[cl,ki,kk,kc,ks,ka,kb,ko,ku] Udah Ga Kepake(Boleh di apus)
 #DEF10=[cl,ki,kk,kc,ks,ka,kb,ko,ke] Udah Ga Kepake(Boleh di apus)
-mid = cl.getProfile().mid #Luffy
-Amid = ki.getProfile().mid #Zorro
-Bmid = kk.getProfile().mid #Sanji
-Cmid = kc.getProfile().mid #Ussop
-Dmid = ks.getProfile().mid #Chooper
+mid = cl.getProfile().mid 
+Amid = ki.getProfile().mid 
+Bmid = kk.getProfile().mid 
+Cmid = kc.getProfile().mid 
+Dmid = ks.getProfile().mid 
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
 admin=["ub797559f7224e07e2c0cd8a7285c7f8f"] 
@@ -96,7 +96,7 @@ Ready:
 ≫ SelfBot ≪
 
 
-ṡȗƿƿȏяṭєԀ ɞʏ:
+Suport by:
 ☆ AKATSUKI BOT PROTECT ☆
 ☆ CREATOR BY AZZAM☆
 
@@ -1673,9 +1673,9 @@ def bot(op):
                                 #print rom
                                 chiya += rom[1] + "\n"
 
-                        cl.sendText(msg.to, "||Di Read Oleh||%s\n||By : Koplaxs BOT||\n\n>Pelaku CCTV<\n%s-=CCTV=-\n•Bintitan\n•Panuan\n•Kurapan\n•Kudisan\n\nAmiin Ya Allah\n[%s]" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                        cl.sendText(msg.to, "||Di Read Oleh||%s\n||By : Akatsuki BOT||\n\n>Pelaku CCTV<\n%s-=CCTV=-\n•Bintitan\n•Panuan\n•Kurapan\n•Kudisan\n\nAmiin Ya Allah\n[%s]" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
-                        cl.sendText(msg.to, "Ketik Cctv dulu Koplak\nBaru Ketil Ciduk\nDASAR PIKUN ♪")
+                        cl.sendText(msg.to, "Ketik Cctv dulu P.A\nBaru Ketil Ciduk\nDASAR PIKUN ♪")
 #-----------------------------------------------
 
 #-----------------------------------------------
@@ -2055,7 +2055,7 @@ def bot(op):
           #----------------Fungsi Unbanned User Target Finish-----------------------#
            
         #-------------Fungsi Spam Start---------------------#
-            elif msg.text in ["Up","up","Up Chat","Up chat","up chat","Upchat","upchat"]:
+            elif msg.text in ["Racun"]:
               if msg.from_ in admin:
                 cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
                 ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
@@ -2124,7 +2124,7 @@ def bot(op):
                   cl.sendText(msg.to,h)
       #--------------List Group------------
        #------------ Keluar Dari Semua Group------
-            elif msg.text in ["Bot out","Op bye"]: # Keluar Dari Semua Group Yang Di dalem nya  ada bot(Kalo Bot Kalian Nyangkut di Group lain :D)
+            elif msg.text in ["Bye group"]: # Keluar Dari Semua Group Yang Di dalem nya  ada bot(Kalo Bot Kalian Nyangkut di Group lain :D)
               if msg.from_ in owner:
                 gid = cl.getGroupIdsJoined()
                 gid = ki.getGroupIdsJoined()
@@ -2179,18 +2179,18 @@ def bot(op):
        #-------------Fungsi Respon Start---------------------#
             elif msg.text in ["Absen","Absen bot","Absen dulu","Respon"]:
               if msg.from_ in admin:
-                cl.sendText(msg.to,"Tukang Sayur On")
-                ki.sendText(msg.to,"Tukang Colli On")
-                kk.sendText(msg.to,"Tukang Boker On")
-                kc.sendText(msg.to,"Tukang Becak On")
-                ks.sendText(msg.to,"Tukang Boong")
-                cl.sendText(msg.to,"Semua Udah Hadir Boss\nSiap Protect Group\nAman Gak Aman Yang Penting Anu")
+                cl.sendText(msg.to,"Six Pain 1 On")
+                ki.sendText(msg.to,"Six Pain 2 On")
+                kk.sendText(msg.to,"Six Pain 3 On")
+                kc.sendText(msg.to,"Six Pain 4 On")
+                ks.sendText(msg.to,"Six Pain 5 On")
+                cl.sendText(msg.to,"Semua Udah Hadir Zam\nSiap Protect Group\nWe Are AKATSUKI LEGEND")
       #-------------Fungsi Respon Finish---------------------#
                             
 
       #-------------Fungsi Balesan Respon Start---------------------#
-            elif msg.text in ["Ini Apa","ini apa","Apaan Ini","apaan ini"]:
-                ki.sendText(msg.to,"Ya gitu deh intinya mah 􀨁􀅴questioning􏿿")
+            elif msg.text in ["Azzam"]:
+                ki.sendText(msg.to,"Creator Saya yang Tampan dan Baik Hati😍😍")
 
       #-------------Fungsi Balesan Respon Finish---------------------#
 
@@ -2229,7 +2229,7 @@ def bot(op):
                 
       #-------------Fungsi Chat ----------------
             elif msg.text in ["Woy","woy","Woi","woi","bot","Bot"]:
-                 quote = ['Istri yang baik itu Istri yang Mengizinkan Suaminya untuk Poligami 😂😂😂.','Kunci Untuk Bikin Suami Bahagia itu cuma satu..\nIzinkan Suamimu Untuk Selingkuh Coyyy ','Ah Kupret Lu','Muka Lu Kaya Jamban','Ada Orang kah disini?','Sange Euy','Ada Perawan Nganggur ga Coy?']
+                 quote = ['yaa Ada Apa?','gua disini om/tante','azzam tuh creator kami']
                  psn = random.choice(quote)
                  cl.sendText(msg.to,psn)
             
