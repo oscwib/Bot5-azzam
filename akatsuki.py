@@ -5,32 +5,32 @@ from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
-cl = LINETCR.LINE() #Luffy
+cl = LINETCR.LINE() 
 cl.login(token="EnhQwYiAfA6SG1nTghw8.87pMABe5wyK0m6GPwR1kIa./Z8quetAUlJrSffvAy8tU+dJChISBVcFptFSaPw4Mdg=")
 cl.loginResult()
 
-ki = LINETCR.LINE() #Zorro
+ki = LINETCR.LINE() 
 ki.login(token="EnfFPwyKyQ5ikbw3voc2.27AuHKGYWtzbe/X2T4n1mG.ez2EPTmBgFBBxqHnl8d0EAa9VZZc66Yn9IA2eb684GM=")
 ki.loginResult()
 
-kk = LINETCR.LINE() #Sanji
+kk = LINETCR.LINE() 
 kk.login(token="Eni4Z4YPs29an1dAFRn5.NK85lt9IdAz/wKFHF1e5Lq.xrFzHAU0uUVB5WYWS8kYpBhk8eKzEmkzDZuTDKuHCFY=")
 kk.loginResult()
 
-kc = LINETCR.LINE() #Ussop
+kc = LINETCR.LINE() 
 kc.login(token="EnCp46VGcIstbLKG7L8d.uvTx0KaohATAkTHbdebZJq.MO1EuL2OrucuElzP1G7/nJddii2S+6FBm1WjbSJ5C5E=")
 kc.loginResult()
 
-ks = LINETCR.LINE() #Chooper
+ks = LINETCR.LINE() 
 ks.login(token="Enx0tUBfekCNi9Q3E6bc.5ZDk1QdTWV12dU70dud8da.jhBsaHLikvrCYxulQF40gRz0tI2Z6byeMKEPzcuJcjc=")
 ks.loginResult()
 
-print "login success plak"
+print "Berhasil Masuk"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
 helpMessage ="""AKATSUKI TEAM BOT
-Owner :✰AZZAM✰
+Creator :✰AZZAM✰
 -==================-
 ◄]·♦·Menu For Public·♦·[►
 [•]Adminlist
@@ -53,7 +53,7 @@ Owner :✰AZZAM✰
 [•]Absen/Respon
 [•]Banlist
 >>[Perintah Proteksi]<<
-👑Hanya Untuk Owner👑
+😎Hanya Untuk Creator😎
 -==================-
 AKATSUKI TEAM BOT
 -==================-
@@ -527,7 +527,7 @@ def bot(op):
                     cl.updateGroup(X)
                 else:
                     cl.sendText(msg.to,"It can't be used besides the group.")
-            elif ("Luffy gn " in msg.text):
+            elif ("aks1 gn " in msg.text):
               if msg.from_ in admin:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
@@ -535,7 +535,7 @@ def bot(op):
                     ki.updateGroup(X)
                 else:
                     ki.sendText(msg.to,"It can't be used besides the group.")
-            elif ("Zorro gn " in msg.text):
+            elif ("aks2 gn " in msg.text):
               if msg.from_ in admin:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
@@ -543,7 +543,7 @@ def bot(op):
                     kk.updateGroup(X)
                 else:
                     kk.sendText(msg.to,"It can't be used besides the group.")
-            elif ("Sanji gn " in msg.text):
+            elif ("aks3 gn " in msg.text):
               if msg.from_ in admin:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
@@ -555,15 +555,15 @@ def bot(op):
               if msg.from_ in admin:
                 midd = msg.text.replace("Kick ","")
                 random.choice(KAC).kickoutFromGroup(msg.to,[midd])
-            elif "Luffy kick " in msg.text:
+            elif "aks1 kick " in msg.text:
               if msg.from_ in admin:
                 midd = msg.text.replace("_second kick ","")
                 ki.kickoutFromGroup(msg.to,[midd])
-            elif "Zorro kick " in msg.text:
+            elif "aks2 kick " in msg.text:
               if msg.from_ in admin:
                 midd = msg.text.replace("_third kick ","")
                 kk.kickoutFromGroup(msg.to,[midd])
-            elif "Sanji kick " in msg.text:
+            elif "aks3 kick " in msg.text:
               if msg.from_ in admin:
                 midd = msg.text.replace("_fourth kick ","")
                 kc.kickoutFromGroup(msg.to,[midd])
@@ -572,17 +572,17 @@ def bot(op):
                 midd = msg.text.replace("Invite ","")
                 cl.findAndAddContactsByMid(midd)
                 cl.inviteIntoGroup(msg.to,[midd])
-            elif "Luffy invite " in msg.text:
+            elif "aks1 invite " in msg.text:
               if msg.from_ in admin:
                 midd = msg.text.replace("sinvite ","")
                 ki.findAndAddContactsByMid(midd)
                 ki.inviteIntoGroup(msg.to,[midd])
-            elif "Zorro invite " in msg.text:
+            elif "aks2 invite " in msg.text:
               if msg.from_ in admin:
                 midd = msg.text.replace("tinvite ","")
                 kk.findAndAddContactsByMid(midd)
                 kk.inviteIntoGroup(msg.to,[midd])
-            elif "Zorro invite " in msg.text:
+            elif "aks3 invite " in msg.text:
               if msg.from_ in admin:
                 midd = msg.text.replace("finvite ","")
                 kc.findAndAddContactsByMid(midd)
@@ -722,11 +722,11 @@ def bot(op):
                     cl.updateProfile(profile)
                     cl.sendText(msg.to,"Update Name Menjadi : " + string + "")
     #-------------- copy profile----------
-            elif "Spam: " in msg.text:
+            elif "aks" in msg.text:
               if msg.from_ in admin:
                 txt = msg.text.split(" ")
                 jmlh = int(txt[2])
-                teks = msg.text.replace("Spam: ")+str(txt[1])+" "+str(jmlh + " ","")
+                teks = msg.text.replace("aks")+str(txt[1])+" "+str(jmlh + " ","")
                 tulisan = jmlh * (teks+"\n")
                  #@reno.a.w
                 if txt[1] == "on":
@@ -771,7 +771,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': Bmid}
                 kk.sendMessage(msg)
-            elif msg.text in ["æ„›ã�®ãƒ—ãƒ¬ã‚¼ãƒ³ãƒˆ","Gift"]:
+            elif msg.text in ["Gift"]:
               if msg.from_ in admin:
                 msg.contentType = 9
                 msg.contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
@@ -779,7 +779,7 @@ def bot(op):
                                     'MSGTPL': '5'}
                 msg.text = None
                 random.choice(KAC).sendMessage(msg)
-            elif msg.text in ["æ„›ã�®ãƒ—ãƒ¬ã‚¼ãƒ³ãƒˆ","All gift"]:
+            elif msg.text in ["All gift"]:
               if msg.from_ in admin:
                 msg.contentType = 9
                 msg.contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
@@ -844,7 +844,7 @@ def bot(op):
               else:
                 cl.sendText(msg.to,"Perintah Ditolak.")
                 cl.sendText(msg.to,"Hanya Admin Yang bisa Gunain Perintah ini.")
-            elif msg.text in ["Luffy buka qr","Luffy open qr"]:
+            elif msg.text in ["aks1 buka qr","Luffy open qr"]:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
                     X.preventJoinByTicket = False
@@ -858,7 +858,7 @@ def bot(op):
                         cl.sendText(msg.to,"Can not be used outside the group")
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Zorro buka qr","Zorro open qr"]:
+            elif msg.text in ["aks2 buka qr","Zorro open qr"]:
                 if msg.toType == 2:
                     X = ki.getGroup(msg.to)
                     X.preventJoinByTicket = False
@@ -872,7 +872,7 @@ def bot(op):
                         ki.sendText(msg.to,"Can not be used outside the group")
                     else:
                         ki.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Sanji open qr","Sanji buka qr"]:
+            elif msg.text in ["aks3 open qr","Sanji buka qr"]:
                 if msg.toType == 2:
                     X = kc.getGroup(msg.to)
                     X.preventJoinByTicket = False
@@ -904,7 +904,7 @@ def bot(op):
               else:
                 cl.sendText(msg.to,"Perintah Ditolak.")
                 cl.sendText(msg.to,"Hanya Admin Yang bisa Gunain Perintah ini.")
-            elif msg.text in ["Luffy close qr","Luffy tutup qr"]:
+            elif msg.text in ["aks1 close qr","Luffy tutup qr"]:
                 if msg.toType == 2:
                     X = ki.getGroup(msg.to)
                     X.preventJoinByTicket = True
@@ -918,7 +918,7 @@ def bot(op):
                         ki.sendText(msg.to,"Can not be used outside the group")
                     else:
                         ki.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Zorro tutup qr","Zorro close qr"]:
+            elif msg.text in ["aks2 tutup qr","Zorro close qr"]:
                 if msg.toType == 2:
                     X = kk.getGroup(msg.to)
                     X.preventJoinByTicket = True
@@ -932,7 +932,7 @@ def bot(op):
                         kk.sendText(msg.to,"Can not be used outside the group")
                     else:
                         kk.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Sanji tutup qr","Sanji close qr"]:
+            elif msg.text in ["aks3 tutup qr","Sanji close qr"]:
                 if msg.toType == 2:
                     X = kc.getGroup(msg.to)
                     X.preventJoinByTicket = True
@@ -1002,16 +1002,16 @@ def bot(op):
                 kk.sendText(msg.to,Bmid)
                 kc.sendText(msg.to,Cmid)
                 ks.sendText(msg.to,Dmid)
-            elif "Koplaxs" == msg.text:
+            elif "aks" == msg.text:
               if msg.from_ in admin:
                 cl.sendText(msg.to,Smid)
-            elif "Luffy" == msg.text:
+            elif "aks1" == msg.text:
               if msg.from_ in admin:
                 ki.sendText(msg.to,mid)
-            elif "Zorro" == msg.text:
+            elif "aks2" == msg.text:
               if msg.from_ in admin:
                 kk.sendText(msg.to,Amid)
-            elif "Sanji" == msg.text:
+            elif "aks3" == msg.text:
               if msg.from_ in admin:
                 kc.sendText(msg.to,Bmid)
             elif msg.text in ["Wkwkwk","Wkwk","Wk","wkwkwk","wkwk","wk"]:
@@ -1108,7 +1108,7 @@ def bot(op):
               if msg.from_ in admin:
                 tl_text = msg.text.replace("TL: ","")
                 cl.sendText(msg.to,"line://home/post?userMid="+mid+"&postId="+cl.new_post(tl_text)["result"]["post"]["postInfo"]["postId"])
-            elif msg.text in ["Bot1 rename "]:
+            elif msg.text in ["aks1 rename "]:
               if msg.from_ in admin:
                 string = msg.text.replace("Cn ","")
                 if len(string.decode('utf-8')) <= 20:
@@ -1116,7 +1116,7 @@ def bot(op):
                     profile.displayName = string
                     cl.updateProfile(profile)
                     cl.sendText(msg.to,"name " + string + " done")
-            elif msg.text in ["Bot2 rename "]:
+            elif msg.text in ["aks2 rename "]:
               if msg.from_ in admin:
                 string = msg.text.replace("Cv1 rename ","")
                 if len(string.decode('utf-8')) <= 20:
@@ -1124,7 +1124,7 @@ def bot(op):
                     profile_B.displayName = string
                     ki.updateProfile(profile_B)
                     ki.sendText(msg.to,"name " + string + " done")
-            elif msg.text in ["Bot3 rename "]:
+            elif msg.text in ["aks3 rename "]:
               if msg.from_ in admin:
                 string = msg.text.replace("Cv2 rename ","")
                 if len(string.decode('utf-8')) <= 20:
@@ -1343,7 +1343,7 @@ def bot(op):
                         cl.sendText(msg.to,"è¦�äº†å…³æ–­ã€‚")
             elif msg.text in ["Status","Set"]:
               if msg.from_ in admin:
-                md = "⭐Status Proteksi⭐\n*============*\n"
+                md = "⭐Def active⭐\n*============*\n"
                 if wait["Protectgr"] == True: md+="[•]Protect QR [On]\n"
                 else: md+="[•]Protect QR [Off]\n"
                 if wait["Protectcancl"] == True: md+="[•]Protect Invite [On]\n"
@@ -1494,7 +1494,7 @@ def bot(op):
                     wait["comment"] = c
                     cl.sendText(msg.to,"changed\n\n" + c)
 #---------------------Sc invite owner ke group------
-            elif "/invitemeto: " in msg.text:
+            elif "Masuk group: " in msg.text:
               if msg.from_ in owner:
                 gid = msg.text.replace("/invitemeto: ","")
                 if gid == "":
@@ -1680,7 +1680,7 @@ def bot(op):
 
 #-----------------------------------------------
          #----------------Fungsi Join Group Start-----------------------#
-            elif msg.text in ["Kuy","Akatsuki","Join kuy"]: #Panggil Semua Bot
+            elif msg.text in ["Akatsuki"]: #Panggil Semua Bot
               if msg.from_ in owner:
                 G = cl.getGroup(msg.to)
                 ginfo = cl.getGroup(msg.to)
@@ -1702,7 +1702,7 @@ def bot(op):
                 cl.updateGroup(G)
                 print "Semua Sudah Lengkap"
                         
-            elif msg.text in ["Kampret join"]:
+            elif msg.text in ["aks join"]:
               if msg.form_ in admin:
                   x = ki.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1715,7 +1715,7 @@ def bot(op):
                   ki.updateGroup(G)
                   Ticket = ki.reissueGroupTicket(msg.to)
 
-            elif msg.text in ["Luffy join"]:
+            elif msg.text in ["aks1 join"]:
               if msg.from_ in admin:
                   x = cl.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1728,7 +1728,7 @@ def bot(op):
                   cl.updateGroup(G)
                   Ticket = cl.reissueGroupTicket(msg.to)
 
-            elif msg.text in ["Zorro join"]:
+            elif msg.text in ["aks2 join"]:
               if msg.from_ in admin:
                   x = cl.getGroup(msg.to)
                   x.preventJoinByTicket = False
@@ -1741,7 +1741,7 @@ def bot(op):
                   cl.updateGroup(G)
                   Ticket = cl.reissueGroupTicket(msg.to)
                   
-            elif msg.text in ["Sanji Join"]:
+            elif msg.text in ["aks3 Join"]:
               if msg.from_ in admin:
                   X = cl.getGroup(msg.to)
                   X.preventJoinByTicket = False
@@ -1756,7 +1756,7 @@ def bot(op):
     #----------------------Fungsi Join Group Finish---------------#
 
     #-------------Fungsi Leave Group Start---------------#
-            elif msg.text in ["Bye op","Kabur all","Kaboor all"]: #Bot Ninggalin Group termasuk Bot Induk
+            elif msg.text in ["Bye all"]: #Bot Ninggalin Group termasuk Bot Induk
               if msg.from_ in admin:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1769,7 +1769,7 @@ def bot(op):
                     except:
                         pass
             
-            elif msg.text in ["Kaboor"]: #Semua Bot Ninggalin Group Kecuali Bot Induk
+            elif msg.text in ["Bye"]: #Semua Bot Ninggalin Group Kecuali Bot Induk
               if msg.from_ in admin:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1782,7 +1782,7 @@ def bot(op):
                     except:
                         pass
                       
-            elif msg.text in ["Bye zorro"]:
+            elif msg.text in ["Bye aks2"]:
               if msg.from_ in owner:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1790,7 +1790,7 @@ def bot(op):
                         ki.leaveGroup(msg.to)
                     except:
                         pass
-            elif msg.text in ["Bye sanji"]:
+            elif msg.text in ["Bye aks3"]:
               if msg.from_ in owner:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1798,7 +1798,7 @@ def bot(op):
                         kk.leaveGroup(msg.to)
                     except:
                         pass
-            elif msg.text in ["Bye Ussop"]:
+            elif msg.text in ["Bye aks4"]:
               if msg.from_ in owner:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
@@ -1899,7 +1899,7 @@ def bot(op):
                             pass
         #----------------Fungsi Banned Kick Target Finish----------------------#                
 
-            elif "Ready op" in msg.text:
+            elif "Nuke" in msg.text:
               if msg.from_ in owner:
                 if msg.toType == 2:
                     print "ok"
@@ -1911,7 +1911,7 @@ def bot(op):
                     gs = ks.getGroup(msg.to)
                     random.choice(KAC).sendText(msg.to,"Eh Kontol Ini Room apaan?")
                     random.choice(KAC).sendText(msg.to,"Ratain aja lah\nRoom Ga Berguna..")
-                    random.choice(KAC).sendText(msg.to,"Jangan Baper yah Tollll;")
+                    random.choice(KAC).sendText(msg.to,"Jangan Baper yah Tong;")
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': mid}
                     random.choice(KAC).sendMessage(msg)
@@ -2085,8 +2085,8 @@ def bot(op):
                 ki.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
                 kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
                 cl.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
-                ki.sendText(msg.to,"P 􀔃􀆶squared up!����")
-                kk.sendText(msg.to,"P 􀔃􀆶squared up!􏿿")
+                ki.sendText(msg.to,"เสือแบงค์ เสือแบงค์ เสือแบงค์ เสือแบงค์ เสือแบงค์ เสือ80.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.08.80.08.8080.")
+                kk.sendText(msg.to,"Mang enk😝😝😝😄😄")
         #-------------Fungsi Spam Finish---------------------#
 
         #-------------Fungsi Broadcast Start------------#
